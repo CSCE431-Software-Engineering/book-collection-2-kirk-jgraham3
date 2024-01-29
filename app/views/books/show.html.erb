@@ -1,0 +1,17 @@
+<h1>Show Details</h1>
+
+<table class="table" summary="Book form"">
+    <tbody>
+    <tr>
+        <th>Title</th>
+        <td><%= @book.title %></td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+  <%= link_to "Edit Book", edit_book_path(@book), class: "action_button" %>
+  <%= link_to "Delete Book", delete_book_path(@book), class: "action_button" %>
+  </br></br>
+  <%= link_to "Back to Home", books_path, class: "button" %>
+</div>

@@ -1,0 +1,35 @@
+<h1>Home</h1>
+<p>Created by <%= @created_by %> and styled with ChatGPT</p>
+
+<!-- app/views/books/index.html.erb -->
+<% if flash[:notice] %>
+  <div class="flash-notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<h1>All Books</h1>
+
+<table class="table" summary="Book list" style="width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid;">Title</th>
+      <th style="border: 1px solid;" colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr style="border: 1px solid;">
+        <td><%= book.title %></td>
+        <td><%= link_to 'Show', book, class: "action_button" %></td>
+        <td><%= link_to 'Edit', edit_book_path(book), class: "action_button" %></td>
+        <td><%= link_to 'Delete', delete_book_path(book), class: "action_button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div>
+  <%= link_to "Add Book", new_book_path, class: "button" %>
+</div>

@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, table {
+    margin: 0;
+    padding: 0;
+  }
+
+  .book_title {
+    border-top: 2px solid #ddd;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Navigation styles (if you have navigation) */
+  nav {
+    background-color: #007bff;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  /* Table styles */
+  .table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Flash notice styles */
+  .flash-notice {
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styles */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+  
+  form input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Button styles */
+  a.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a.button:hover {
+    background-color: #0056b3;
+  }
+  
+.action_button {
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .action_button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  
