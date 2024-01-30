@@ -3,4 +3,18 @@
         <th>Title</th>
         <td><%= f.text_field(:title) %></td>
     </tr>
+    <tr>
+        <th>Author</th>
+        <td><%= f.text_field(:author) %></td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td><%= f.text_field(:price, type: 'number', step: '0.01') %></td>
+    </tr>
+    <tr>
+        <th>Publication Date</th>
+        <td>
+          <%= f.date_select(:published_date, {start_year: 2024, end_year: 1600, include_blank: true }) %>
+        </td>
+    </tr>
 </table>

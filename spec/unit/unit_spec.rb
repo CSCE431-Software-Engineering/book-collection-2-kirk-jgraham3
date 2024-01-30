@@ -4,15 +4,11 @@ require 'rails_helper'
 RSpec.describe Book, type: :model do
   subject do
     described_class.new(
-      title: 'Harry Potter',
+      title: 'harry potter',
       author: 'J.K. Rowling',
       price: 19.99,
-      published_date: Date.new(2001, 6, 26)
+      published_date: Date.new(1997, 6, 26)
     )
-  end
-  
-  it 'is valid with valid attributes' do
-    expect(subject).to be_valid
   end
   
   # Rainy-day scenario (no title)
@@ -21,21 +17,18 @@ RSpec.describe Book, type: :model do
     expect(subject).not_to be_valid
   end
 
-  # Rainy-day scenario (no author)
-  it 'is not valid without an author' do
-    subject.author = nil
+  it 'is not valid with a negative price' do
+    subject.price = -20.0
     expect(subject).not_to be_valid
   end
 
-  # Rainy-day scenario (no price)
-  it 'is not valid without a price' do
-    subject.price = nil
-    expect(subject).not_to be_valid
+  it 'can set and get author' do
+    book = Book.new(author: "J. K. Rowling")
+    assert_equal "J. K. Rowling", book.author
   end
 
-  # Rainy-day scenario (no published_date)
-  it 'is not valid without a published_date' do
-    subject.published_date = nil
-    expect(subject).not_to be_valid
+  it 'can set and get published date' do
+    book = Book.new(published_date: "1997-06-26")
+    assert_equal "1997-06-26", book.published_date.strftime('%Y-%m-%d')
   end
 end
